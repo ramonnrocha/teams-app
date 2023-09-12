@@ -10,6 +10,7 @@ export const Container = styled(TouchableOpacity)`
     flex-direction: row;
     align-items: center;
     padding: 24px;
+    margin-bottom: 16px;
 `
 
 export const Title = styled.Text`
@@ -20,7 +21,8 @@ export const Title = styled.Text`
 
 export const Icon = styled(UsersThree).attrs(({ theme }) => ({
     size: 32,
-    color: theme.COLORS.GREEN_700
+    color: theme.COLORS.GREEN_700,
+    weight:"fill"
 }))`
     margin-right: 24px;
 `

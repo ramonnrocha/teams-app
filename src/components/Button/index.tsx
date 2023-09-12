@@ -7,6 +7,7 @@ type Props = TouchableOpacityProps & {
 };
 
 export function Button({ text, type = "PRIMARY", ...rest }: Props) {
+  
   return (
     <Container type={type} {...rest}>
       <TextButton>{text}</TextButton>

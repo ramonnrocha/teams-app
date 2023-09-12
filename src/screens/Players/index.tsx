@@ -9,17 +9,25 @@ import { FlatList } from "react-native";
 import { Player } from "../../components/Player";
 import { Button } from "../../components/Button";
 import { ListEmpty } from "../../components/ListEmpty";
+import { useRoute } from "@react-navigation/native";
+
+type RouteParams = {
+  group: string
+}
 
 export function Players() {
   const [team, setTeam] = useState("Time A");
   const [players, setPlayers] = useState([]);
 
+  const route = useRoute()
+  const { group } = route.params as RouteParams
+
   return (
     <Container>
       <Header showBackButton />
       <Destaque
-        title="Nome da Turma"
-        subtitle="adicione a galera e separe os times"
+        title={group}
+        subtitle="Adicione a galera e separe os times"
       />
       <Form>
         <Input placeholder="Nome da Pessoa" autoCorrect={false} />
@@ -41,7 +49,7 @@ export function Players() {
       <FlatList
         data={players}
         keyExtractor={(item) => item}
-        renderItem={({ item }) => <Player onRemove={() => {}} name={item} />}
+        renderItem={({ item }) => <Player onRemove={() => { }} name={item} />}
         ListEmptyComponent={<ListEmpty message="Não há pessoas nesse time" />}
         contentContainerStyle={[
           { paddingBottom: 100 },

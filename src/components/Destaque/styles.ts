@@ -10,7 +10,8 @@ export const Title = styled.Text`
 
     font-size: ${({ theme }) => theme.FONT_SIZE.XL}px;
     font-family: ${({ theme }) => theme.FONT_FAMILY.BOLD};
-    color: ${({ theme }) => theme.COLORS.GRAY_100}
+    color: ${({ theme }) => theme.COLORS.GRAY_100};
+    margin-bottom: 5px;
 
 `
 export const Subtitle = styled.Text`
