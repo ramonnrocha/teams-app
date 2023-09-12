@@ -1,6 +1,4 @@
-<p align="center">
-  <img alt="capa" src="https://www.figma.com/file/FKVFQMhLlgnEWKYRmmgjRF/Ignite-Teams-(Community)?type=design&node-id=47-276&mode=design&t=93SLie8ODZIqVoXq-4" width="200px">
-</p>
+
 
 <p align="center">
   <img src="https://img.shields.io/github/stars/rocketseat-education/nlw-06-flutter?label=stars&message=MIT&color=000000&labelColor=8257e5" alt="Stars">
