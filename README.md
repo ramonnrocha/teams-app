@@ -37,7 +37,7 @@
    <p align="center">
       O Layout foi desenvolvido por <a href="https://instagram.com/tiagoluchtenberg">Tiago Luchtenberg</a>, e você pode acessá-lo no Figma:
    
-   - <a href="https://www.figma.com/file/kLK7FYnWKMoN68sQXcSniu/PayFlow">Mobile</a> 📱
+   - <a href="https://www.figma.com/file/FKVFQMhLlgnEWKYRmmgjRF/Ignite-Teams-(Community)?type=design&node-id=47-276&mode=design&t=9uEnBXDlbSFPauh1-0">Mobile</a> 📱
    </p>
 
 ---
