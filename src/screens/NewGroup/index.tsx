@@ -8,42 +8,53 @@ import { useState } from "react";
 import { groupCreate } from "../../storage/group/groupCreate";
 import { AppError } from "../../utils/AppError";
 import { Alert } from "react-native";
+import { KeyboardAvoidingView } from "react-native";
 
 export function NewGroup() {
+  const [group, setGroup] = useState<string>("");
 
-  const [group, setGroup] = useState<string>('')
-
-  const navigation = useNavigation()
+  const navigation = useNavigation();
 
   async function handleNewGroup() {
     try {
       if (group.trim() !== "") {
-        await groupCreate(group)
-        navigation.navigate('players', { group })
+        await groupCreate(group);
+        navigation.navigate("players", { group });
       } else {
-        Alert.alert("Nova Turma", "Digite o nome da nova Turma")
+        Alert.alert("Nova Turma", "Digite o nome da nova Turma");
       }
     } catch (error) {
       if (error instanceof AppError) {
-        Alert.alert("Nova Turma", error.message)
+        Alert.alert("Nova Turma", error.message);
       } else {
-        Alert.alert('Nova Turma', "Não foi possível criar nova Turma")
-        console.log(error)
+        Alert.alert("Nova Turma", "Não foi possível criar nova Turma");
+        console.log(error);
       }
     }
   }
   return (
     <Container>
-      <Header showBackButton />
-      <Content>
-        <Icon />
-        <Destaque
-          title="Nova Turma"
-          subtitle="Crie uma turma para adicionar pessoas"
-        />
-        <Input onChangeText={setGroup} placeholder="Nome da turma" />
-        <Button onPress={handleNewGroup} style={{ marginTop: 20 }} text="Criar" />
-      </Content>
+      <KeyboardAvoidingView style={{ flex: 1 }} behavior="padding">
+        <Header showBackButton />
+        <Content>
+          <Icon />
+          <Destaque
+            title="Nova Turma"
+            subtitle="Crie uma turma para adicionar pessoas"
+          />
+          <Input
+            onSubmitEditing={handleNewGroup}
+            returnKeyType="done"
+            onChangeText={setGroup}
+            placeholder="Nome da turma"
+          />
+          <Button
+            onPress={handleNewGroup}
+            style={{ marginTop: 20 }}
+            text="Criar"
+          />
+        </Content>
+      </KeyboardAvoidingView>
     </Container>
   );
 }
