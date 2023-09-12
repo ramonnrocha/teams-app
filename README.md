@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="PayFlow" src="https://github.com/rocketseat-education/nlw-06-flutter/blob/main/.github/payflow-logo.png?raw=true" width="200px">
+  <img alt="capa" src="https://www.figma.com/file/FKVFQMhLlgnEWKYRmmgjRF/Ignite-Teams-(Community)?type=design&node-id=47-276&mode=design&t=93SLie8ODZIqVoXq-4" width="200px">
 </p>
 
 <p align="center">
@@ -15,7 +15,6 @@
    
    - [Sobre 📖](#sobre-)
    - [Layout 🎨](#layout-)
-   - [Arquivos no Notion 📋](#arquivo-no-notion-)
    - [Como Usar 🤔](#como-usar-)
 
    </p>
@@ -50,16 +49,16 @@
 
    ```
    - Clone esse repositório:
-   $ git clone https://github.com/ramonnrocha/payflow_flutter
+   $ git clone https://github.com/ramonnrocha/teams-app.git
 
    - Entre no diretório:
-   $ cd payflow_flutter
+   $ cd teams-app
 
    - Instale as dependências:
-   $ flutter pub get
+   $ npm install
 
    - Inicie o app: 
-   $ flutter run
+   $  npm run start
    ```
 
 ---
