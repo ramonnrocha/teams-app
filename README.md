@@ -10,7 +10,3 @@
 
    - Inicie o app: 
    $  npm run start
-   ```
-
----
-
